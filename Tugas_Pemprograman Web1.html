@@ -41,6 +41,22 @@
             max-width: 100%;
             height: auto;
         }
+        /* Table Styling */
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        /* Table Size */
+        table {
+            width: 50%;
+        }
+
+        /* Padding Spacing */
+        td, th {
+            padding: 10px;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -60,7 +76,48 @@
         <p>
             Tim medis kami terdiri dari para profesional berpengalaman dalam bidang kesehatan yang siap membantu Anda. <a href="https://www.halodoc.com/">Hubungi kami</a> untuk konsultasi atau pertanyaan lebih lanjut.
         </p>
-        <img src="healthcare.png" alt="Gambar Kesehatan">
-    </div>
+        <img height="500" width="500" style="vertical-align: middle;" src="healthcare.png" alt="Gambar Kesehatan">
+        <br>
+        <table>
+            <tr>
+                <th>Nama</th>
+                <th>Umur</th>
+                <th>Jenis Kelamin</th>
+                <th>Spesialis</th>
+            </tr>
+            <tr>
+                <td>dr. Bagus Prasetyo</td>
+                <td>30</td>
+                <td>Laki-laki</td>
+                <td>THT</td>
+            </tr>
+            <tr>
+                <td>dr. Reisa Kartikasari</td>
+                <td>25</td>
+                <td>Perempuan</td>
+                <td>Mata</td>
+            </tr>
+        </table>
+        <br>
+        <h2>Formulir Kesehatan</h2>
+        <form action="proses.php" method="post">
+            <label for="nama">Nama:</label><br>
+            <input type="text" id="nama" name="nama" required><br><br>
+    
+            <label for="umur">Umur:</label><br>
+            <input type="number" id="umur" name="umur" required><br><br>
+    
+            <label for="jenis_kelamin">Jenis Kelamin:</label><br>
+            <select id="jenis_kelamin" name="jenis_kelamin" required>
+                <option value="laki-laki">Laki-laki</option>
+                <option value="perempuan">Perempuan</option>
+            </select><br><br>
+    
+            <label for="gejala">Gejala:</label><br>
+            <textarea id="gejala" name="gejala" rows="4" cols="50"></textarea><br><br>
+    
+            <input type="submit" value="Kirim">
+        </form>
+    </div> 
 </body>
 </html>
